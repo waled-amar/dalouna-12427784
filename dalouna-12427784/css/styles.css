@@ -108,12 +108,19 @@ position: relative;
 }
 
 #about {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
-    max-width: 1200px;
+    display: flex;
+        max-width: 1200px;
     margin: 40px auto;
     padding: 0 5%;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+#about .card {
+    flex: 1 1 calc(50% - 24px);
+    box-sizing: border-box;
 }
 .card {
     background: var(--card);
@@ -404,4 +411,5 @@ position: relative;
   font-size: 14px;               
   color: #777;                  
   border-top: 1px solid #ddd;   
+
 }
